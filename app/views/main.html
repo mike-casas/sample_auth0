@@ -1,9 +1,39 @@
-<div class="div">
-    <h1>{{rule.title}}</h1>
-    <ul>
-     <li>{{rule.summary}}</li>
-     <li>{{rule.description}}</li>
-     <li>{{rule.code}}</li>
+<section class="jumbotron">
+  <h2 >
+    <img  ng-if= "!rule.logo" src="/images/vanillajs.svg">
+    <img  ng-if= "rule.logo" src="/images/vanillajs.svg">
+  </h2>
+  <h1>{{rule.title}}</h1>
+  <p>{{rule.summary}}</p>
+  <div class="btn btn-success btn-lg">Try auth0 for free</div>
+</section>
 
-  </ul>
-</div>
+<section class="content-container">
+  <div class="container">
+    <h3>How it Works?</h3>
+    <p ng-bind-html= "rule.description"></p>
+    <h3>How do I use it?</h3>
+    <p>Just create a new rule in the Auth0 dashboard, and copy the following code replacing the placeholders with the
+    appropriate values<p>
+    <pre><code class="language-js hljs javascript">{{rule.code}}</code></pre>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h3>What is a Rule?</h3>
+    <p>A rule is arbitrary JavaScript code that can be used to extend Auth0's default behavior when authenticating a user.
+    Enabled rules will be executed in the order shown below for all users and applications as the final step of the
+    authentication process. </p>
+    <p>Rules can be used to enrich and transform the user profile, deny access to specific users under certain conditions, retrieve
+    information from external services and much more. To learn more about rules, see
+    https://auth0.com/docs/rules.<p>
+  </div>
+</section>
+
+<section id="categories">
+  <div class="container">
+    <h3 class="text-center">You Might Also be Interested in the Following Rules</h3>
+  </div>
+</section>
+

@@ -1,5 +1,10 @@
 // bower:scss
 // endbower
+$color-text: #000;
+$bg-color-gray-light: #f5f7f9;
+$font-size-base: 14px;
+$font-weight-bold : 500;
+
 body{
   padding: 0;
   margin: 0;
@@ -7,4 +12,33 @@ body{
 
 li{
   margin-top: 20px
+}
+
+.site-header {
+    border-bottom: 1px solid $bg-color-gray-light;
+  }
+
+.jumbotron{
+  background-color: #fff;
+  h1{
+    color: darken($color-text, 87%);
+  }
+  h2{
+    border: 2px solid $bg-color-gray-light;
+  }
+  p{
+    color: darken($color-text, 54%);
+  }
+}
+
+.content-container{
+  background-color: $bg-color-gray-light;
+}
+
+#categories{
+  border-top: 1px solid $bg-color-gray-light;
+}
+
+footer.site-footer{
+  background-color: $bg-color-gray-light;
 }
